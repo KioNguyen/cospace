@@ -1,4 +1,4 @@
-import ListOrg from "./list-org";
+import ListOrg from "./_component/organization/list";
 import NewOrgButton from "./new-org-btn";
 
 export default function Sidebar() {
