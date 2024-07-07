@@ -20,7 +20,9 @@ export default function OrganizationItem({
   const isActive = organization?.id === id;
 
   const handleClick = () => {
-    setActive?.({ organization: id });
+    console.log("🚀 ~ handleClick ~ id:", id);
+    if (!setActive) return;
+    setActive({ organization: id });
   };
   return (
     <div className="aspect-square relative">
@@ -31,7 +33,8 @@ export default function OrganizationItem({
           src={imageUrl}
           onClick={handleClick}
           className={cn(
-            "rounded-md cursor-pointer opacity-75 hover:opacity-100 transition"
+            "rounded-md cursor-pointer opacity-65 hover:opacity-100 transition",
+            isActive && "opacity-100"
           )}
         />
       </Hint>

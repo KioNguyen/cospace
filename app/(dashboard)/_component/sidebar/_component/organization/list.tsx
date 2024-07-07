@@ -20,7 +20,7 @@ export default function ListOrg() {
       {userMemberships.data.map((org) => (
         <li key={org.id}>
           <OrganizationItem
-            id={org.id}
+            id={org.organization.id}
             name={org.organization.name}
             imageUrl={org.organization.imageUrl}
           />
